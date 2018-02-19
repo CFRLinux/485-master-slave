@@ -67,22 +67,22 @@ void loop() /****** LOOP: RUNS CONSTANTLY ******/
 	if (Q2 == true)
 	 {
   	delay(10);
-		IntToString(); // konvatere Int til string, eller find lave data
- 	  digitalWrite(Pin13LED, HIGH);  // Show activity
-	  delay(5);              
-	  digitalWrite(SSerialTxControl, RS485Transmit);   // Enable RS485 Transmit    
-	  RS485Serial.print("a"+Bat1);   // Send the byte back
-	  RS485Serial.print("b"+Bat2);   // Send the byte back
-	  RS485Serial.print("c"+VL1);    // Send the byte back
-	  RS485Serial.print("d"+VL2);    // Send the byte back
-	  RS485Serial.print("e"+Dis);    // Send the byte back
-	  RS485Serial.print("f"+UsTemp); // Send the byte back
-	  RS485Serial.write("\n");       // Send the byte back
-	  delay(20);   
-	  digitalWrite(SSerialTxControl, RS485Receive); // Disable RS485 Transmit      
-	  digitalWrite(Pin13LED, LOW);
+	IntToString(); // konvatere Int til string, eller find lave data
+ 	digitalWrite(Pin13LED, HIGH);  // Show activity
+	delay(5);              
+	digitalWrite(SSerialTxControl, RS485Transmit);   // Enable RS485 Transmit    
+	RS485Serial.print("a"+Bat1);   // Send the byte back
+	RS485Serial.print("b"+Bat2);   // Send the byte back
+	RS485Serial.print("c"+VL1);    // Send the byte back
+	RS485Serial.print("d"+VL2);    // Send the byte back
+	RS485Serial.print("e"+Dis);    // Send the byte back
+	RS485Serial.print("f"+UsTemp); // Send the byte back
+	RS485Serial.write("\n");       // Send the byte back
+	delay(20);   
+	digitalWrite(SSerialTxControl, RS485Receive); // Disable RS485 Transmit      
+	digitalWrite(Pin13LED, LOW);
 //	  delay(10);	 
-	  Q1 = false; Q2 = false;
+	 Q1 = false; Q2 = false;
 //	  delay(100);
 
 	 }
